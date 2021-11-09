@@ -1,10 +1,97 @@
 [
     {
-        "name":"Apple 13",
-        "description":"London is the capital and largest city of England and the United Kingd...",
+        "name":"IPhone 13",
+        "description":"iPhone 13 features a cinema standard wide color gamut, displaying colors just as filmmakers intended. And with precise color accuracy, everything on the screen",
         "price":"800",
-        "picture":"https://i.ibb.co/3fSrzVz/28-10-2021-23-44-37-REC.png",
+        "picture":"https://i.ibb.co/GdRWh6f/iphone-13-f-e1631703251417-1024x552.jpg",
         "rating":"5",
-        "people":"1500"
+        "people":"1269"
+    },
+    {
+        "name":"IPhone 13 Mini",
+        "description":"The iPhone 13 mini display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.",
+        "price":"600",
+        "picture":"https://i.ibb.co/GdRWh6f/iphone-13-f-e1631703251417-1024x552.jpg",
+        "rating":"4",
+        "people":"1847"
+    },
+    {
+        "name":"IPhone 13 Pro",
+        "description":"iPhone 13 Pro was made for low light. The Wide camera adds a wider aperture and our largest sensor yet — and it leverages the LiDAR Scanner for Night ",
+        "price":"1300",
+        "picture":"https://i.ibb.co/XjHrG8W/apple-iphone-13-pro-review-16335346643x2.webp",
+        "rating":"4",
+        "people":"873"
+    },
+    {
+        "name":"IPhone 13 Pro Max",
+        "description":"iPhone 13 Pro Max. The biggest Pro camera system upgrade ever. Super Retina XDR display with ProMotion for a faster, more responsive feel",
+        "price":"800",
+        "picture":"https://i.ibb.co/kg95qX2/Apple-i-Phone-13-Pro-Max-featured-image-packshot-review-1024x691.jpg",
+        "rating":"5",
+        "people":"1581"
+    },
+    {
+        "name":"IPhone 12",
+        "description":"iPhone 12 and iPhone 12 mini. With A14 Bionic, great battery life, Night mode on every camera, 5G speed, Ceramic Shield, and Super Retina XDR display.",
+        "price":"799",
+        "picture":"https://i.ibb.co/c2D2nHP/Apple-12-Smartphones-491901532-i-1-1200-Wx1200-H-300-Wx300-H.jpg",
+        "rating":"4",
+        "people":"4262"
+    },
+    {
+        "name":"IPhone 12 Mini",
+        "description":"iPhone 12 mini are splash, water, and dust resistant and were tested under controlled laboratory conditions with a rating of IP68 under IEC",
+        "price":"699",
+        "picture":"https://i.ibb.co/SR8ms3b/i-Phone-12-iphone-12-mini-purple.webp",
+        "rating":"4",
+        "people":"5628"
+    },
+    {
+        "name":"IPhone 12 Pro",
+        "description":"iPhone 12 Pro models offer the highest quality video in a smartphone, and are the first cameras and only devices in the world to enable an end",
+        "price":"1099",
+        "picture":"https://i.ibb.co/ZTs6Hyp/R5ghkk2-SBc6-VKYzntuox-SB-768-80.jpg",
+        "rating":"5",
+        "people":"3564"
+    },
+    {
+        "name":"IPhone 12 Pro Max",
+        "description":"The iPhone 12 Pro Max display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.",
+        "price":"800",
+        "picture":"https://i.ibb.co/s1f4qJN/apple-iphone-12-pro-max.jpg",
+        "rating":"5",
+        "people":"896"
+    },
+    {
+        "name":"IPhone 11 Pro Max",
+        "description":"iPhone 11 has a tough glass and metal body that can survive a fall most of the time. It also lasts longer.",
+        "price":"1046",
+        "picture":"https://i.ibb.co/Lkh3whJ/images-22.jpg",
+        "rating":"5",
+        "people":"1269"
+    },
+    {
+        "name":"IPhone X",
+        "description":"The iPhone X display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.",
+        "price":"1000",
+        "picture":"https://i.ibb.co/t4n3xcD/images-23.jpg",
+        "rating":"5",
+        "people":"879"
+    },{
+        "name":"IPhone XR",
+        "description":"The iPhone XR now sells at times and if you want the best value for money iPhone, this is easily the phone.",
+        "price":"800",
+        "picture":"https://i.ibb.co/PW5KMRG/1536782796-635-iphone-xr.jpg",
+        "rating":"3",
+        "people":"2364"
+    },
+    {
+        "name":"IPhone 8",
+        "description":"Apple iPhone 8 is coming with a front and back glass design for the first time in an iPhone. Now you won't feel any cheap plastic or cold metal while holding",
+        "price":"567",
+        "picture":"https://i.ibb.co/XWLkYw1/https-blogs-images-forbes-com-gordonkelly-files-2017-09-Screenshot-2017-09-18-at-18-20-30.png",
+        "rating":"4",
+        "people":"4565"
     }
 ]
