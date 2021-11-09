@@ -100,7 +100,7 @@ run().catch(console.dir());
 
 // Basic
 app.get("/", (req,res) => {
-    res.send("Traveller BD Server Running...");
+    res.send("Apple BD Server Running...");
 });
 
 app.listen(port, () => {
