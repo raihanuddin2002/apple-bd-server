@@ -19,10 +19,10 @@ async function run () {
     try{
         await client.connect(); 
         const database = client.db("applebd");
-        const productsCollention = database.collection("productsLimit");
+        const productsCollention = database.collection("products");
         
         // GET API
-        app.get("/products", async (req,res) => {
+        app.get("/productsLimit", async (req,res) => {
             const cursor = productsCollention.find({}).limit(6);
             const products =await cursor.toArray();
             res.send(products);
