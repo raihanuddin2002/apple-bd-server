@@ -130,6 +130,19 @@ async function run () {
             const result = await usersCollention.updateOne(filter, updateDoc, options);
             res.send(result);
         });
+
+        app.put('/users/:id', async (req,res) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)}
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    role: `admin`
+                },
+              };
+            const service = await usersCollention.updateOne(query,updateDoc,options);
+            res.send(service);
+        });
     }finally{
 
     }
