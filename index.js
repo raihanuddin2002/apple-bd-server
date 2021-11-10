@@ -108,6 +108,12 @@ async function run () {
         await client.connect(); 
         const database = client.db("applebd");
         const usersCollention = database.collection("users");
+        // GET API
+        app.get('/users', async (req,res) => {
+            const cursor = usersCollention.find({});
+            const users =await cursor.toArray();
+            res.send(users);
+        });
         // POST API
         app.post("/saveUserInfo" , async(req,res) => {
             const user = req.body.saveUserInfo;
