@@ -99,6 +99,23 @@ async function run () {
     }finally{
 
     }
+
+    // Users
+    try{
+        await client.connect(); 
+        const database = client.db("applebd");
+        const productsCollention = database.collection("users");
+
+        // POST METHOD
+        app.post("/saveUsers", async (req,res) => {
+            const saveUser = req.body.saveUser;
+            const result = await productsCollention.insertOne(saveUser);
+            res.send(result);
+        });
+
+    }finally{
+
+    }
 }
 run().catch(console.dir());
 
