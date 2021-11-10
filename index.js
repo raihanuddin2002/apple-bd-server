@@ -22,11 +22,16 @@ async function run () {
         const productsCollention = database.collection("products");
         
         // GET API
+        app.get("/products", async (req,res) => {
+            const cursor = productsCollention.find({});
+            const products =await cursor.toArray();
+            res.send(products);
+        });
         app.get("/productsLimit", async (req,res) => {
             const cursor = productsCollention.find({}).limit(6);
             const products =await cursor.toArray();
             res.send(products);
-        })
+        });
         app.get("/products/:id", async (req,res) => {
             const id = req.params.id;
             const query = {_id: ObjectId(id)}
