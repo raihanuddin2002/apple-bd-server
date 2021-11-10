@@ -76,8 +76,8 @@ async function run () {
         });
 
          // PUT API
-        app.put("/products", async (req,res) => {
-            const id = req.body.id;
+        app.put("/products/:id", async (req,res) => {
+            const id = req.params.id;
             const query = {_id: ObjectId(id)}
             const options = { upsert: true };
             const updateDoc = {
