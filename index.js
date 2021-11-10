@@ -110,7 +110,6 @@ async function run () {
         const usersCollention = database.collection("users");
         // POST API
         app.post("/saveUserInfo" , async(req,res) => {
-            console.log("hit");
             const user = req.body.saveUserInfo;
             const result = await usersCollention.insertOne(user);
             res.send(result);
