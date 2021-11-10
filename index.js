@@ -98,30 +98,25 @@ async function run () {
             res.send(result);
         });
 
-        // Users 
-
-         // POST API
-         app.post("/userSave" , async(req,res) => {
-            const user = req.body.saveUserInfo;
-            console.log(user)
-            const result = await usersCollention.insertOne(user);
-            res.send(result);
-        })
+        
     }finally{
 
     }
 
-    // // Users
-    // try{
-    //     await client.connect(); 
-    //     const database = client.db("applebd");
-        
+    try{
+        // Users 
+        await client.connect(); 
+        const database = client.db("applebd");
+        const usersCollention = database.collection("users");
+        // POST API
+        app.post("/saveUserInfo" , async(req,res) => {
+            const user = req.body.saveUserInfo;
+            const result = await usersCollention.insertOne(user);
+            res.send(result);
+        });
+    }finally{
 
-       
-
-    // }finally{
-
-    // }
+    }
 }
 run().catch(console.dir());
 
