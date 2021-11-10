@@ -108,7 +108,7 @@ async function run () {
 
         // POST METHOD
         app.post("/saveUsers", async (req,res) => {
-            const saveUser = req.body.saveUser;
+            const saveUser = req.body.saveUserInfo;
             const result = await productsCollention.insertOne(saveUser);
             res.send(result);
         });
