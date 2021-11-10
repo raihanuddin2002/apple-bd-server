@@ -23,7 +23,7 @@ async function run () {
         
         // GET API
         app.get("/products", async (req,res) => {
-            const cursor = productsCollention.find({});
+            const cursor = productsCollention.find({}).limit(6);
             const products =await cursor.toArray();
             res.send(products);
         })
