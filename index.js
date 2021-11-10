@@ -52,6 +52,7 @@ async function run () {
         await client.connect(); 
         const database = client.db("applebd");
         const productsCollention = database.collection("applebdOrders");
+        const usersCollention = database.collection("users");
         
         // GET API
         app.get("/allOrders", async(req,res) => {
@@ -96,26 +97,31 @@ async function run () {
             const result = await productsCollention.deleteOne(query);
             res.send(result);
         });
-    }finally{
 
-    }
+        // Users 
 
-    // Users
-    try{
-        await client.connect(); 
-        const database = client.db("applebd");
-        const productsCollention = database.collection("users");
-
-        // POST METHOD
-        app.post("/saveUsers", async (req,res) => {
-            const saveUser = req.body.saveUserInfo;
-            const result = await productsCollention.insertOne(saveUser);
+         // POST API
+         app.post("/userSave" , async(req,res) => {
+            const user = req.body.saveUserInfo;
+            console.log(user)
+            const result = await usersCollention.insertOne(user);
             res.send(result);
-        });
-
+        })
     }finally{
 
     }
+
+    // // Users
+    // try{
+    //     await client.connect(); 
+    //     const database = client.db("applebd");
+        
+
+       
+
+    // }finally{
+
+    // }
 }
 run().catch(console.dir());
 
