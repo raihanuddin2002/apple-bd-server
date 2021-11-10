@@ -19,7 +19,7 @@ async function run () {
     try{
         await client.connect(); 
         const database = client.db("applebd");
-        const productsCollention = database.collection("products");
+        const productsCollention = database.collection("productsLimit");
         
         // GET API
         app.get("/products", async (req,res) => {
