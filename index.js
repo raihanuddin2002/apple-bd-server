@@ -115,12 +115,12 @@ async function run () {
             res.send(result);
         });
 
-        // POST API
+        // PUT API
         app.put("/saveUserInfo" , async(req,res) => {
-            const user = req.body;
+            const user = req.body.saveUserInfo;
             const filter = {email: user.email};
-            const options = {upsert: true}
-            const updateDoc = {$set: user}
+            const options = {upsert: true};
+            const updateDoc = {$set: user};
             const result = await usersCollention.updateOne(filter, updateDoc, options);
             res.send(result);
         });
