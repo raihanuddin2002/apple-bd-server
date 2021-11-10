@@ -75,19 +75,19 @@ async function run () {
             res.send(newResult);
         });
 
-        //  // PUT API
-        // app.put("/products", async (req,res) => {
-        //     const id = req.body.id;
-        //     const query = {_id: ObjectId(id)}
-        //     const options = { upsert: true };
-        //     const updateDoc = {
-        //         $set: {
-        //             orderStatus: `Approved`
-        //         },
-        //       };
-        //     const service = await productsCollention.updateOne(query,updateDoc,options);
-        //     res.send(service);
-        // });
+         // PUT API
+        app.put("/products", async (req,res) => {
+            const id = req.body.id;
+            const query = {_id: ObjectId(id)}
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    orderStatus: `Approved`
+                },
+              };
+            const service = await productsCollention.updateOne(query,updateDoc,options);
+            res.send(service);
+        });
 
         //    DELETE API
         app.delete("/myOrders/:id", async(req,res) => {
