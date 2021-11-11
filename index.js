@@ -110,8 +110,8 @@ async function run () {
 
     }
 
+    // Users 
     try{
-        // Users 
         await client.connect(); 
         const database = client.db("applebd");
         const usersCollention = database.collection("users");
@@ -156,6 +156,30 @@ async function run () {
               };
             const service = await usersCollention.updateOne(query,updateDoc,options);
             res.send(service);
+        });
+    }finally{
+
+    }
+
+    // Review
+    try{
+        await client.connect(); 
+        const database = client.db("applebd");
+        const reviewCollention = database.collection("review");
+
+        // GET API
+        app.get('/review', async (req,res) => {
+            const cursor = reviewCollention.find({});
+            const users =await cursor.toArray();
+            res.send(users);
+        });
+
+        // POST API
+        app.post('/review', async (req,res) => {
+            const review = req.body.review;
+            const cursor = reviewCollention.find({});
+            const users = await cursor.toArray();
+            res.send(users);
         });
     }finally{
 
