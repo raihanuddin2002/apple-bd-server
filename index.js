@@ -175,7 +175,7 @@ async function run () {
         });
 
         // POST API
-        app.post('/review', async (req,res) => {
+        app.post('/reviews', async (req,res) => {
             const review = req.body.review;
             const cursor = reviewCollention.insertOne(review);
             const users = await cursor.toArray();
