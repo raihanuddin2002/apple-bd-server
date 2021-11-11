@@ -114,11 +114,18 @@ async function run () {
             const users =await cursor.toArray();
             res.send(users);
         });
+        
         // POST API
         app.post("/saveUserInfo" , async(req,res) => {
             const user = req.body.saveUserInfo;
             const result = await usersCollention.insertOne(user);
             res.send(result);
+        });
+        app.post('/users/:email', async (req,res) => {
+            const email = req.params.email;
+            const query = {email: email};
+            const user = await usersCollention.findOne(query);
+            res.send(user);
         });
 
         // PUT API
