@@ -132,7 +132,11 @@ async function run () {
             const email = req.params.email;
             const query = {email: email};
             const user = await usersCollention.findOne(query);
-            res.send(user);
+            let isAdmin = false;
+            if(user?.role === 'admin'){
+                isAdmin = true;
+            }
+            res.json({admin: isAdmin});
         });
 
         // PUT API
